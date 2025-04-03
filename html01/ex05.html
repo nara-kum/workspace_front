@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html5 공부하기5</title>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="./ex01.html" target="list">h1~h6 요소</a></li>
+            <li><a href="./ex02.html" target="list">p, br, blockquote, q, strong, em 요소</a></li>
+            <li><a href="./ex03.html" target="list">ol, ul, li 요소</a></li>
+            <li><a href="./ex04.html" target="list">img, a 요소</a></li>
+            <li><a href="./ex05.html" target="list">table 요소</a></li>
+            <li><a href="./ex06.html" target="list">테이블 - 게시판예제</a></li>
+            <li><a href="./ex07.html" target="list">절대경로와 상대경로</a></li>
+        </ul>
+        
+        <hr>
+        
+        <h1>html5 공부</h1>
+        <h2>table, tr, td, colspan, rowspan 요소</h2>
+        <h3>테이블기본</h3>
+        <table border="1">
+            <tr>
+                <td>1,1</td>
+                <td>1,2</td>
+                <td>1,3</td>
+                <td>1,4</td>
+            </tr>
+
+            <tr>
+                <td>2,1</td>
+                <td>2,2</td>
+                <td>2,3</td>
+                <td>2,4</td>
+            </tr>
+
+            <tr>
+                <td>3,1</td>
+                <td>3,2</td>
+                <td>3,3</td>
+                <td>3,4</td>
+            </tr>
+
+        </table>
+
+        <h3>가로합치기</h3>
+        <table border="2">
+            <tr>
+                <td>1,1</td>
+                <td>1,2</td>
+                <td>1,3</td>
+                <td>1,4</td>
+            </tr>
+            
+            <tr>
+                <td>2,1</td>
+                <td colspan="2">2,2</td><!--가로합침-->
+                <!--<td>2,3</td>-->
+                <td>2,4</td>
+            </tr>
+
+            <tr>
+                <td>3,1</td>
+                <td>3,2</td>
+                <td>3,3</td>
+                <td>3,4</td>
+            </tr>
+            
+        </table>
+
+        <h3>세로합치기</h3>
+        <table border="3">
+            <tr>
+                <td>1,1</td>
+                <td>1,2</td>
+                <td>1,3</td>
+                <td>1,4</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">2,1</td><!--세로합침-->
+                <td>2,2</td>
+                <td>2,3</td>
+                <td>2,4</td>
+            </tr>
+
+            <tr>
+                <!--<td>3,1</td>-->
+                <td>3,2</td>
+                <td>3,3</td>
+                <td>3,4</td>
+            </tr>
+        </table>
+
+        <!--세로줄 먼저 체크, 차례로 row 생성 *수정범위를 줄이기 위해-->
+        <h3>가로세로합치기</h3>
+        <table border="4">
+            <tr>
+                <td>1,1</td>
+                <td>1,2</td>
+                <td>1,3</td>
+                <td>1,4</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">2,1</td>
+                <td colspan="2">2,2</td>
+                <!--<td>2,3</td>-->
+                <td>2,4</td>
+            </tr>
+
+            <tr>
+                <!--<td>3,1</td>-->
+                <td>3,2</td>
+                <td>3,3</td>
+                <td>3,4</td>
+            </tr>
+
+        </table>
+
+        <hr><!--'상관없어요~'의 의미, 컨텐츠 분리 또는 구분-->
+
+        <ul>
+            <li><a href="./ex01.html" target="list">h1~h6 요소</a></li>
+            <li><a href="./ex02.html" target="list">p, br, blockquote, q, strong, em 요소</a></li>
+            <li><a href="./ex03.html" target="list">ol, ul, li 요소</a></li>
+            <li><a href="./ex04.html" target="list">img, a 요소</a></li>
+            <li><a href="./ex05.html" target="list">table 요소</a></li>
+            <li><a href="./ex06.html" target="list">테이블 - 게시판예제</a></li>
+            <li><a href="./ex07.html" target="list">절대경로와 상대경로</a></li>
+        </ul>
+    </body>
+
+</html>
