@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* 차곡차곡 일정한 위치로 정렬해야함(태그순서) */
+table{
+    border-collapse: collapse;
+    border-bottom: 2px solid #949494;
+    text-align: center;
+}
+thead{
+    background-color: #d5d5d5;
+    border-top: 2px solid #949494;
+    border-bottom: 2px solid #949494;
+}
+tbody>tr{
+    border-bottom: 2px dotted #949494;
+}
+tbody>tr:hover{
+    background-color: #ffff00;
+}
+tbody>tr:nth-child(2n){
+    background-color: aqua;
+}
