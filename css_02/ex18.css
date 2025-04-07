@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, div, 
+h1, h2, h3, h4, h5, h6, ul, li, dl, dt, ol,
+form, input, select, table, textarea, button, fieldset, legend,
+p, th, td, tr {
+    margin: 0px; padding: 0px;
+}
+body{
+    background-color: #808080;
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+.wrap{
+    width: 500px;
+    background-color: #ffffff;
+}
+.wrap h3{
+    /* border: 1px solid #000; */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 공통 */
+.form-group{
+    /* border: 1px solid #000; */
+    margin-bottom: 10px;
+}
+.form-group .form-title{
+    display: inline-block;
+    width: 80px;
+}
+
+
+/* 게시판선택 */
+.form-group #sel-board{
+    width: 200px;
+}
+/* 제목 */
+.form-group #tt{
+    width: 400px;
+}
+/* 패스워드 */
+.form-group #pw{
+    width: 197px;
+}
+/* 공개,허용 범위 */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+    margin-right: 10px;
+}
+/* 텍스트상자 */
+.form-group textarea{
+    width: 485px;
+    height: 50px;
+}
+/* 첨부파일 */
+
+/* 버튼두개 */
+.btn-gr{
+    border-top: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+.btn-gr button{
+    width: 60px;
+    height: 30px;
+}
