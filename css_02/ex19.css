@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, div, 
+h1, h2, h3, h4, h5, h6, ul, li, dl, dt, ol,
+form, input, select, table, textarea, button, fieldset, legend,
+p, th, td, tr {
+    margin: 0px; padding: 0px;
+}
+
+body{
+    background-color: #808080;
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+.wrap{
+    background-color: #ffffff;
+    width: 600px;
+}
+.wrap h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 공통 */
+.form-group{
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.f-title{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+/* 아이디 */
+/* 패스워드 */
+/* 이름 */
+/* 이동통신사 */
+.form-group #id,
+.form-group #pw,
+.form-group #nm,
+.form-group #telecom{
+    width: 180px; 
+    font-size: 15px;
+    font-family: "맑은 고딕";
+}
+
+/* 주소 */
+#adr{
+    width: 180px; 
+    font-size: 15px; 
+    margin-bottom: 5px;
+}
+#title2{
+    width: 400px; 
+    font-size: 15px;
+}
+
+/* 혈액형, 나이, 취미 */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+    margin-right: 10px;
+}
+/* 자기소개 */
+textarea{
+    width: 402px; 
+    height: 100px;
+    font-size: 15px;
+    vertical-align: top;
+}
+/* 버튼두개 */
+.btn-gr{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.btn-gr button{
+    width: 120px;
+    height: 30px;
+}
