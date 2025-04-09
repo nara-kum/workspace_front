@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/************************************
+* mysite 공통                       *
+************************************/
+
+/**************** 레이아웃 ****************/
+.wrap{
+    width: 1000px;
+    margin: 0px auto;
+}
+body{
+    font-family: "맑은 고딕";
+    font-size: 12px;
+    color: #000;
+}
+
+#header{
+    border-bottom: 1px solid #a6a6a6;
+    padding: 10px 0px 10px 0px;
+}
+#nav{
+    border-bottom: 1px solid #a6a6a6;
+    padding: 10px 0px 10px 0px;
+}
+#content{
+    padding: 20px
+}
+#content2{
+    padding: 20px 0px 20px 0px;
+}
+#content2 #aside{
+    width: 180px;
+    margin-right: 10px;
+    float: left;
+}
+#content2 #main{
+    width: 800px;
+    float: left;
+    /* border: 1px solid #000; */
+}
+
+#footer{
+    padding: 10px 0px 10px 0px;
+    background-color: #a6a6a6;
+}
+/**************** 레이아웃 ****************/
+
+
+/* 헤더 */
+#header h1{
+    font-size: 35px;
+    color: #79b30b;
+    font-weight: bold;
+    float: left;
+}
+#header ul{
+    float: right;
+    margin-top: 14px;
+}
+#header ul>li{
+    float: left;
+    padding: 3px 5px 3px 5px;
+    margin-left: 5px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    background-color: #a6a6a6;
+}
+/* /헤더 */
+
+/* 네비게이터 */
+#nav ul{
+
+}
+
+#nav ul>li{
+    width: 250px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+}
+/* /네비게이터 */
+
+/* 컨텐츠(게시판리스트) */
+#aside h2{
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    line-height: 60px; /*height가 변경되거나, 컨텐츠가 두줄이 될 경우 틀어짐*/
+    background-color: #a6a6a6;
+    text-indent: 1px;
+}
+
+#aside ul>li{
+    border: 1px solid #a6a6a6;
+    font-size: 15px;
+    padding: 8px 10px 8px 10px;
+    margin-top: 5px;
+    text-indent: 2px;
+}
+
+#main #main-head{
+    /* background-color: gray; */
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #a6a6a6;
+}
+#main #main-head h3{
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+#main #main-head ul{
+    float: right;
+    margin-top: 10px;
+}
+#main #main-head ul>li{
+    /* border: 1px solid #000; */
+    float: left;
+}
+#main #main-head ul>li::after{
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+#main #main-head ul>li:last-child::after{
+    content: none;
+    padding-right: 0px;
+}
+
+
+/* /컨텐츠(게시판리스트) */
+
+/* 푸터 */
+#footer p{
+    text-align: center;
+}
+/* /푸터 */

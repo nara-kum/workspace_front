@@ -1,0 +1,50 @@
+/************************************
+* 게시판관련 페이지만 사용             *
+* 리스트, 등록폼, 수정폼, 읽기         *
+************************************/
+
+input, button{
+    font-family: "맑은 고딕";
+    font-size: 15px;
+    padding: 3px 10px 3px 10px;
+}
+
+#serch{
+    text-align: right;
+    margin-top: 15px;
+}
+table{
+    border-collapse: collapse;
+    width: 800px;
+    margin-top: 5px;
+}
+table thead tr{
+    border-top: 2px solid #a6a6a6;
+    border-bottom: 2px solid #a6a6a6;
+}
+table thead th{
+    background-color: rgb(241, 241, 241);
+    padding: 10px 0px 10px 0px;
+}
+
+table tbody td{
+    border-bottom: 1px solid #a6a6a6;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+#page ul{
+    padding: 0px 270px 0px 270px;
+}
+#page ul>li{
+    float: left;
+    margin: 5px 5px 5px 5px;
+    
+}
+#page ul>li:hover{
+    font-weight: bold;
+}
+
+#write{
+    text-align: right;
+}

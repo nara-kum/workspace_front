@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/************************************
+* main 페이지만 사용 
+************************************/
+
+/* 컨텐츠(메인) */
+#profile{
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+#hi{
+    float: left;
+    width: 600px;
+}
+#hi .hi{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#hi .hi2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#hi a{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* /컨텐츠(메인) */

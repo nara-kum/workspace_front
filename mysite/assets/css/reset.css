@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/************************************
+* 전체초기화                         *
+************************************/
+
+/* 초기화 */
+body, div, 
+h1, h2, h3, h4, h5, h6, ul, li, dl, dt, ol,
+form, input, select, table, textarea, button, fieldset, legend,
+p, th, td, tr {
+    margin: 0px; padding: 0px;
+}
+
+input, select, textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+/* clearfix */
+.clearfix::before,
+.clearfix::after{display: block; content: "";line-height: 0;}
+.clearfix::after {clear: both;}
+
+ol, ul{
+    list-style-type: none; 
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

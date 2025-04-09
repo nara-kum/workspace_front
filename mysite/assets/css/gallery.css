@@ -1,0 +1,22 @@
+/************************************
+* 갤러리관련 페이지만 사용             *
+* 갤러리, 파일첨부                   *
+************************************/
+button{
+    font-family: "맑은 고딕";
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+#main-imges{
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000;
+}
+#main-imges #upload{
+    text-align: right;
+    margin: 10px 0px 10px 0px;
+}
+#gang{
+    width: 200px;
+}
