@@ -48,3 +48,8 @@ table tbody td{
 #write{
     text-align: right;
 }
+
+#main-board .btn-gr{
+    text-align: right;
+    margin-top: 10px;
+}
