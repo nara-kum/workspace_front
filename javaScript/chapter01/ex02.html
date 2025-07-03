@@ -1,0 +1,79 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log("==============================================");
+            console.log('# 변수선언');
+            
+            var no = 3;
+            var str = '안녕하세요';
+            var bool =  3>5;
+            var year, month, day;
+            year = '2025';
+
+            console.log(no);
+            console.log(str);
+            console.log(bool);
+            console.log(year);
+
+            let no2 = 3;
+            
+            console.log("----------------------------------------------");
+            // let name2 = '유재석';
+            // console.log(name2);
+
+            let name2 = '정우성';       //name2가 let으로 선언되어서 중복에러 발생
+            console.log(name2);
+
+            /*let을 사용하자!!*/
+
+            console.log("==============================================");
+            console.log('# 상수선언');
+            const PI = 3.14;            //상수는 변수 선언과 동시에 초기화(값을 넣는다)를 해줘야 한다
+            // PI = 20;
+            console.log(PI);
+
+            console.log("==============================================");
+            console.log('#초기화 시에 자료형이 결정된다');         //문제 발생 요지가 다분하다
+            let data;
+            console.log(typeof data);
+
+            data = 15;
+            console.log(typeof data);
+
+            data = '안녕하세요';
+            console.log(typeof data);
+
+            data = 5>3;
+            console.log(typeof data);
+
+            console.log("==============================================");
+            console.log('# undefined vs null');
+            let myVar1;
+            let myVar2 = null;
+            
+            console.log(typeof myVar1);
+            console.log(typeof myVar2);
+
+            console.log("==============================================");
+            console.log('# == vs ===');     //동등연산자 vs 일치연산자
+
+            console.log('123' == 123);
+            console.log('123' === 123);
+            
+            console.log(myVar1 == myVar2);      //undefined == null
+            console.log(myVar1 === myVar2);     //undefined === null
+            
+            console.log('' == false);
+            console.log('' == 0);
+            console.log(false == 0);
+
+        </script>
+    </body>
+
+</html>
