@@ -1,0 +1,112 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+
+        <script>
+            console.log('==============================================');
+            console.log('# 배열');
+
+            //배열선언1
+            let arr00 = new Array();
+            arr00[0] = 1;
+            arr00[1] = 2;
+            arr00[2] = 3;
+
+            console.log(arr00[1]);
+
+            console.log('--------------------------------------');
+            /***********************************************************/
+            //배열선언2
+            let arr01 = [10, 20, 30, 40, 50];
+            console.log(arr01[1]);
+
+            let no = arr01[4];
+            console.log(no);
+
+            arr01[2] = 300;
+            console.log(arr01[2]);
+
+            arr01[5] = 1000;
+            console.log('--------------------------------------');
+
+            for(let i=0; i<arr01.length; i++){
+                console.log(arr01[i]);    
+            }
+
+            console.log('--------------------------------------');
+            //전체출력(개발)
+            console.log(arr01);
+
+            console.log('--------------------------------------');
+            /***********************************************************/
+            //배열선언3
+            let arr02 = [];     //값 없이 배열만 선언
+            arr02[0] = 1;
+            arr02[1] = 2;
+            arr02[2] = 3;
+            arr02[4] = 4;
+
+            for(let i=0; i<arr02.length; i++){
+                console.log(arr02[i]);    
+            }
+
+            console.log('--------------------------------------');
+            /***********************************************************/
+            
+            let arr03 = [];
+            arr03[0] = 1;
+            arr03[1] = 1.5;
+            arr03[2] = '앙뇽';
+            arr03[3] = 'hello';
+            arr03[4] = 5>3;
+            arr03[5] = function(){              //변수에 함수를 넣을 수 있다
+                console.log('김나라');
+            };
+
+            for(let i=0; i<arr03.length; i++){
+                // console.log(typeof arr03[i]);
+
+                if(typeof arr03[i]==='function'){
+                    arr03[i]();
+                }else{
+                    console.log(arr03[i]);
+                }
+                
+            }
+
+            console.log('--------------------------------------');
+            arr03[5]();     //함수의 실행
+            //변수에 함수를 넣을 수 있다.
+            //변수 이름을 부르고 ()실행 한다 --> 이름 부르는 것과 실행을 구분해라
+            console.log('--------------------------------------');
+
+            let arr04 = [1, 2.5, '앙뇽', ['박명수', '정우성', '유재석']];
+
+            console.log(arr04[2]);
+            console.log(arr04[3][1]);
+
+            console.log('--------------------------------------');
+
+            let arr05 = ['이효리'];
+            arr05[1] = '정우성';        //지정한 공간에 추가
+            arr05.push('유재석');       //맨 끝에 추가
+            arr05.push('박명수'); 
+            console.log(arr05);
+
+            arr05.pop();                //맨 끝 데이터 삭제
+            console.log(arr05);
+
+            //참고 다양한 함수가 있으니, 필요시 찾아서 사용하자!
+            arr05.splice(1,2);
+            console.log(arr05);
+
+        </script>
+
+    </body>
+
+</html>

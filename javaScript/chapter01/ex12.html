@@ -1,0 +1,40 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('==============================================');
+            console.log('# 변수의 범위');
+
+            /*
+            let str = 'global';
+
+            function checkScope(){
+                let str = 'local';
+                console.log(str);
+            }
+
+            checkScope();       //local
+            console.log(str);   //global
+            */
+
+            let str = 'global';
+
+            function checkScope(){
+                str = 'local';
+                str2 = '로컬';
+            }
+            
+            checkScope();
+            console.log(str);
+            console.log(str2);
+
+
+        </script>
+    </body>
+
+</html>

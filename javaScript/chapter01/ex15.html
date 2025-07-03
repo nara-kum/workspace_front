@@ -1,0 +1,32 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('==============================================');
+            console.log('# 객체(VO개념)');
+
+            let guestbookVO = {
+                name : '정우성',
+                password : '123',
+                content : '방명록내용',
+                showInfo : function(){
+                    console.log('---------------------------------');
+                    console.log('방문자:'+this.name+'  내용:'+this.content);
+                    console.log('---------------------------------');
+                }
+            };
+
+            console.log(guestbookVO.name);
+            console.log(guestbookVO.password);
+            console.log(guestbookVO['content']);
+            guestbookVO.showInfo();
+
+        </script>
+    </body>
+
+</html>

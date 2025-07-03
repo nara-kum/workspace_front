@@ -1,0 +1,35 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('==============================================');
+            console.log('# if문');
+
+            let no = window.prompt('숫자를 입력해주세요');
+            console.log(no);
+            console.log(typeof no);     //string
+
+            if(no>0){                   //no가 number형으로 변경되서 계산된다
+                console.log('양수');
+            }else if(no<0){
+                console.log('음수');
+            }else{
+                console.log('0');
+            }
+
+            
+            if(no == 60){                   //no가 number형으로 변경되서 계산된다
+                console.log('같다');
+            }
+            if(no === 60){                  //no가 숫자 60과는 달라서 if문으로 들어갈 수 없음
+                console.log('다르다');
+            }
+        </script>
+    </body>
+
+</html>

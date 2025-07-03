@@ -1,0 +1,52 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('==============================================');
+            console.log('# 배열(List 개념)');
+
+            let shape = [];
+
+            let triangle = {
+                name: '삼각형',
+                width: 5,
+                heigh:10,
+                area: function(){
+                    console.log(this.width*this.heigh/2);
+                }
+            };
+
+            let ractangle = {
+                name: '사각형',
+                width: 5,
+                heigh:5,
+                area: function(){
+                    console.log(this.width*this.heigh);
+                }
+            };
+
+            let circle = {
+                name: '원',
+                radius: 5,
+                area: function(){
+                    console.log(this.radius*this.radius*3.14);
+                }
+            };
+
+            shape.push(triangle);
+            shape.push(ractangle);
+            shape.push(circle);
+
+            for(let i=0; i<shape.length; i++){
+                shape[i].area();
+            }
+
+        </script>
+    </body>
+
+</html>

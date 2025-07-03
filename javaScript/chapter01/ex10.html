@@ -1,0 +1,44 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            /*
+            자바스크립트 작동
+            - 1번째 조사(기명함수)
+            - 2번째는 나머지 수행
+            */
+            
+            console.log('==============================================');
+            console.log('# 기명함수, 익명함수 실행순서');
+            
+            /*******************기명함수*******************/
+
+            //기명함수 실행
+            testA();        //testA는 함수이름, ()는 실행
+
+            //기명함수
+            function testA(){
+                console.log('testA 기명함수 입니다.');
+            }
+
+            /*******************익명함수*******************/
+
+            //함수 자체 이름이 없다
+            let testB = function(){
+                console.log('testB 익명함수 입니다.');
+            }
+
+            //익명함수 실행
+            testB;
+            testB();
+            console.log(testB);
+            
+        </script>
+    </body>
+
+</html>
