@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	.box-red{
+		width: 300px;
+		height: 300px;
+		background-color: #ff0000;
+	}
+
+	.box-blue{
+		width: 500px;
+		height: 500px;
+		background-color: #0000ff;
+	}
+
+	.bold{font-weight: bold;}
+
+	.italic{font-style: italic;}
+
+	.size50{font-size: 50px;}
+
+	.size20{font-size: 20px;}
+
+</style>
+
+
+</head>
+
+	<body>
+
+		<!-- 문자열 변경 -->
+		<p id="p1"> abcdefghijklmn </p>
+		<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+		
+
+		<p id="p3"> abcdefghijklmn </p>
+		<p id="p4"> 학교종이 땡땡땡<br> abcdefg </p>
+
+
+
+		<p id="p11">자바<strong>스크립트</strong></p>
+		<p id="p12">자바<strong>스크립트</strong></p>
+
+
+
+		<p id="p13">문장1</p>
+		<p id="p14">문장2</p>
+
+
+		<!-- ------------------------------------------ -->
+		<script>
+			//돔트리가 완료되었을 때
+			document.addEventListener('DOMContentLoaded',function(){
+				console.log('돔트리완료');
+
+				let p11Tag = document.querySelector('#p11');
+				console.log(p11Tag);
+				console.log(p11Tag.innerHTML);	//html만 가져오고
+				console.log(p11Tag.innerText);	//텍스트만 가져옴	--> 보안 문제로 textcontent로 교체
+				console.log(p11Tag.textContent);
+
+				//#p13태그에 텍스트를 -->"<strong>가나다라마바사아자차카타파하</strong>"
+				let p13Tag = document.querySelector('#p13');
+				
+				p13Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>';
+
+				let p14Tag = document.querySelector('#p14');
+				p14Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>';
+
+				// 요소의 값(content)을 없애는 방법
+				let p1Tag = document.querySelector('#p1');
+				console.log(p1Tag);
+
+				p1Tag.textContent = '';
+			});
+
+		</script>
+		<!-- ------------------------------------------ -->
+
+	</body>
+
+</html>

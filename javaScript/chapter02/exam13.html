@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+</style>
+
+</head>
+
+    <body>
+        <div>
+            <input id="left" type="text" value=""> 
+            + 
+            <input id="right" type="text" value=""> 
+            <br>
+            <button id="btnPlus" type="button" >더하기</button>
+            <p id="display">0</p>
+        </div>
+        
+		<!-- ------------------------------------------ -->
+        <script>
+                /*
+                버튼을 클릭할 때
+                    첫번째 value값 가져오기
+                    두번째 value값 가져오기
+                    둘 더하기
+                    p요소에 더한 값 적용하기
+                */
+
+            document.addEventListener('DOMContentLoaded',function(){
+                console.log('돔트리 완료');
+
+                let btnTag = document.querySelector('#btnPlus');
+                btnTag.addEventListener('click',function(){
+                    console.log('click');
+
+                    //태그 가져오기
+                    let leftTag = document.querySelector('#left');
+                    let rightTag = document.querySelector('#right');
+                    let pTag = document.querySelector('#display');
+
+                    //첫번째 value값 가져오기
+                    let leftNo = Number.parseInt(leftTag.value);
+
+                    //두번째 value값 가져오기
+                    let rightNo = Number.parseInt(rightTag.value);
+
+                    // 둘 더하기
+                    let sum = leftNo + rightNo;
+                    console.log(sum);
+
+                    // p요소에 더한 값 적용하기
+                    pTag.textContent = sum;
+
+                    //입력창 비우기
+                    leftTag.value = '';
+                    rightTag.value = '';
+
+                });
+
+            });
+
+
+        </script>
+		<!-- ------------------------------------------ -->
+    </body>
+
+</html>

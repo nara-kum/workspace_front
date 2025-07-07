@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+</style>
+
+
+</head>
+
+<body>
+    <div>
+		<table border="1" width="540px">
+			<tr>
+				<td>이름</td><td><input type="text" name="name" value=""></td>
+				<td>비밀번호</td><td><input type="password" name="pw" value=""></td>
+			</tr>
+			<tr>
+				<td colspan="4"><textarea cols="72" rows="5" name="content" value=""></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+	<script>
+		
+		document.addEventListener('DOMContentLoaded',function(){
+			console.log('돔확인');
+
+			let btnWrite = document.querySelector('#btnWrite');
+
+			console.log(btnWrite);
+
+			//등록을 누를때 수집
+			btnWrite.addEventListener('click',function(){
+
+				//태그값 가져오기
+				let nameTag = document.querySelector('input[name="name"]');
+				let pwTag = document.querySelector('input[name="pw"]');
+				let contentTag = document.querySelector('textarea[name="content"]');
+
+				let name = nameTag.value;
+				let pw = pwTag.value;
+				let content = contentTag.value;
+
+				guestbookVO = {
+					name: name,
+					pw: pw,
+					content: content
+				};
+
+				console.log(guestbookVO);
+				console.log(guestbookVO.name + '('+guestbookVO.content+')');
+
+			});
+
+		});
+
+
+
+	</script>
+
+</body>
+
+</html>

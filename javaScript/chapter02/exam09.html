@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+	<ul>
+		<li>첫번째아이템입니다.</li>
+		<li>두번째아이템입니다.</li>
+		<li>세번째아이템입니다.</li>
+		<li>네번째아이템입니다.</li>
+		<li>다섯번째아이템입니다.</li>
+		<li>여섯번째아이템입니다.</li>
+	</ul>
+
+	<p id="p01" style="color: #0000ff;">안녕하세요</p>
+	
+	<!-- ------------------------------------------ -->
+	<script>
+		//돔트리가 완료 되었을때
+		document.addEventListener('DOMContentLoaded',function(){
+			console.log('감시');
+
+			//html 가져온다
+			let ulTag = document.querySelector('ul');
+
+			//css 적용한다
+			ulTag.style.fontSize = '40px';				//사이즈
+			ulTag.style.border = '1px solid #ff0000';	//선
+			
+			ulTag.firstElementChild.style.fontFamily = '궁서';	//글꼴
+			ulTag.firstElementChild.style.backgroundColor = 'red';	//배경색
+			ulTag.firstElementChild.style.width = '400px';	//가로
+			ulTag.firstElementChild.style.padding = '10px 20px 30px 40px';	//패딩
+			ulTag.firstElementChild.style.marginLeft = '40px';	//마진
+			
+			ulTag.lastElementChild.style.borderWidth = '5px';
+			ulTag.lastElementChild.style.borderStyle = 'dotted';
+			ulTag.lastElementChild.style.borderColor = '#ff0000';
+
+			ulTag.style.listStyleType = 'none';
+
+			//p1을 빨간색으로 변경
+			let p01Tag = document.querySelector('#p01');
+			console.log(p01Tag);
+			p01Tag.style.color = '#ff0000';
+
+			//document.querySelector('#p01').style.color = '#ff00ff';
+
+		})
+
+	</script>
+	<!-- ------------------------------------------ -->
+</body>
+
+
+</html>

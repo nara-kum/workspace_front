@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	<!--아이디-->
+	<ul>
+		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li id="second"> 텍스트2 텍스트2 텍스트2 텍	스트2 텍스트2 </li>
+		<li id="third"> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
+		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
+		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
+	</ul>
+
+
+	<!-- -------------------------------------- -->
+	<script>
+	//돔트리완료되었을때
+	//html은 document에서 관리 --> html 초벌구이가 완료 되었을때 
+	document.addEventListener('DOMContentLoaded', function(){
+		console.log('돔트리 완료  --  페인팅 되기전');
+
+		//id로 찾기  ///////////////////////////////////////////////
+
+
+		// id="secoend" 를 빨강색 #ff0000
+		let seTag = document.getElementById('second');
+		seTag.style.color = '#ff0000';
+
+		// id="third" 를 파란색 #0000ff
+		let thTag = document.getElementById('third');
+		thTag.style.color = '#0000ff';
+
+		// id="forth" 를 초록색 #00ff00
+		let foTag = document.getElementById('fourth');
+		foTag.style.color = '#00ff00';
+
+
+		// id="first" 를 분홍색 #ff00ff  
+		// !!!동일한 id 가 존재 --> 맨위에 1개만 적용
+		let fiTag = document.getElementById('first');
+		fiTag.style.color = '#ff00ff';
+		
+	});
+
+	//페인팅까지완료되었을때
+	//브라우저 전체창(window) 기준으로 모든 준비가 완료되었을때 --> 화면에 그려졌을때
+	window.addEventListener('load', function(){
+		console.log('페이팅까지 완료');
+	});
+
+	</script>
+	<!-- -------------------------------------- -->
+	 
+</body>
+
+</html>
