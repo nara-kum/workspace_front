@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    ul{
+        background-color: #ff00ff;
+        width: 300px;
+        padding: 10px;
+    }
+    ul>li{
+        border: 1px solid #000000;
+        background-color: #ffffff;
+    }
+</style>
+
+</head>
+
+<body>
+    <ul>
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+    </ul>
+    
+    <button id="btn-before" type="button">앞에추가</button>
+    <button id="btn-after" type="button">뒤에추가</button>
+<!-- ------------------------------------------ -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        console.log('돔돔');
+
+        //'앞에추가'버튼 이벤트 등록
+        let btnBefore = document.querySelector('#btn-before');
+        btnBefore.addEventListener('click',function(){
+            console.log('앞클릭');
+
+            let ulTag = document.querySelector('ul');
+
+            let strHtml = '<li>앞에 추가된 아이템 입니다.</li>'
+            ulTag.insertAdjacentHTML('afterbegin',strHtml);
+        });
+
+        let btnAfter = document.querySelector('#btn-after');
+        btnAfter.addEventListener('click',function(){
+            console.log('뒤클릭');
+
+            let ulTag = document.querySelector('ul');
+
+            let strHtml = '<li>뒤에 추가된 아이템 입니다.</li>'
+            ulTag.insertAdjacentHTML('beforeend',strHtml);
+        });
+
+
+    });
+
+
+</script>
+</body>
+
+</html>

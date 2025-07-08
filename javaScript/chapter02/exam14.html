@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    div{
+        width: 400px;
+        border: 1px solid #000000;
+    }
+    p{
+        border: 1px solid #000000;
+        background-color: #ff00ff;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div>
+        <p id="p01">마바사아자차카타파하</p>
+    </div>
+    
+<!-- ------------------------------------------ -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        console.log('완료');
+
+        let p01Tag = document.querySelector('#p01');
+        console.log(p01Tag);
+
+        //컨텐츠 영역 전체 내용을 변경
+        // p01Tag.innerHTML = '가나다라';
+
+        //컨텐츠 영역 앞에 내용 추가
+        // p01Tag.insertAdjacentHTML("afterbegin",'가나다라');
+
+        //컨텐츠 영역 뒤에 내용 추가
+        // p01Tag.insertAdjacentHTML("beforeend",'abcde');
+
+        //p요소 전에 내용 추가
+        p01Tag.insertAdjacentHTML("beforebegin",'<strong>p태그이전</strong>');
+
+        //p요소 뒤에 내용 추가
+        p01Tag.insertAdjacentHTML("afterend",'p태그이후');
+
+    });
+
+
+</script>
+<!-- ------------------------------------------ -->
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    ul{
+        background-color: #ff00ff;
+        width: 300px;
+        padding: 10px;
+    }
+    ul>li{
+        border: 1px solid #000000;
+        background-color: #ffffff;
+    }
+</style>
+
+</head>
+
+<body>
+    <ul>
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+        <li>여섯번째 아이템 입니다.</li>
+        <li>일곱번째 아이템 입니다.</li>
+        <li>여덟번째 아이템 입니다.</li>
+        <li>아홉번째 아이템 입니다.</li>
+        <li>열번째 아이템 입니다.</li>
+    </ul>
+    
+<!-- ------------------------------------------ -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        console.log('돔');
+
+        /* 1개씩 10개의 이벤트를 등록해야함 리스트가 변경되면 등록이 어려워짐
+        let tag = document.querySelector('li');
+        console.log(tag);
+        tag.addEventListener('click',function(){
+            console.log('클릭');
+        });
+        */
+
+        let liTags = document.querySelectorAll('li');
+        console.log(liTags);
+        
+        for(let i=0; i<liTags.length; i++){
+            liTags[i].addEventListener('click',function(event){
+                console.log(i+'-li태그 삭제');
+                this.remove();
+                
+                //지금 상황에는 두개의 값이 같은데 다른경우도 존재함
+                console.log(this);          //이벤트 리스너가 있는 태그(요소)
+                console.log(event.target);  //사용자가 실제로 클릭한 태그(요소)
+            });
+        }
+
+    });
+
+</script>
+</body>
+
+</html>

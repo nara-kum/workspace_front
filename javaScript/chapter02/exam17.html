@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    ul{
+        background-color: #ff00ff;
+        width: 300px;
+        padding: 10px;
+    }
+    ul>li{
+        border: 1px solid #000000;
+        background-color: #ffffff;
+    }
+</style>
+
+</head>
+
+<body>
+    <ul>
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+    </ul>
+    <button id="btn" type="button">뒤에추가</button>
+    
+<!-- ------------------------------------------ -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        console.log('돔');
+
+        let btnTag = document.querySelector('#btn');
+        console.log(btnTag);
+
+        btnTag.addEventListener('click',function(){
+            console.log('뒤에추가클릭');
+
+            let ulTag = document.querySelector('ul');
+            console.log(ulTag);
+            ulTag.insertAdjacentHTML('beforeend','<li>뒤에 추가된 아이템 입니다.</li>')
+
+        });
+
+        /*
+        let liTags = document.querySelectorAll('li');
+        console.log(liTags);
+
+        for(let i=0; i<liTags.length; i++){
+            liTags[i].addEventListener('click',function(event){
+                console.log(i+'-li태그 삭제');
+                this.remove();
+                // event.target.remove();
+                
+                console.log(this);          //이벤트 리스너가 있는 태그(요소)
+                console.log(event.target);  //사용자가 실제로 클릭한 태그(요소)
+            });
+        };
+        */
+
+        let ulTag = document.querySelector('ul');
+        console.log(ulTag)
+        ulTag.addEventListener('click',function(event){
+            console.log('ul클릭');
+
+            //두개는 다른경우
+            console.log(this);          //이벤트 리스너가 있는 태그(요소)
+            console.log(event.target);  //실제로 이벤트를 동작한 태그(요소)
+            console.log(event.target.tagName);  //실제로 동작한 태그이름(대문자로 출력됨)
+
+            if(event.target.tagName == 'LI'){
+                console.log('LI태그 클릭');
+                event.target.remove();
+            }
+        });
+
+    });
+
+</script>
+</body>
+
+</html>

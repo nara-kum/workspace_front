@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+</style>
+
+
+</head>
+
+<body>
+    <div>
+		<form id="guestbookForm" action="" method="">
+			<table border="1" width="540px">
+				<tr>
+					<td>이름</td><td><input type="text" name="name" value=""></td>
+					<td>비밀번호</td><td><input type="password" name="pw" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="4"><textarea cols="72" rows="5" name="content" value=""></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4"><button id="btnWrite" type="submit">등록</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br>
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(event){
+			console.log('돔돔');
+
+			//폼은 submit버튼 클릭이벤트가 아니다
+			//폼은 이벤트 명이 submit
+			let guestbookForm = document.querySelector('#guestbookForm');
+			console.log(guestbookForm);
+
+			guestbookForm.addEventListener('submit',function(event){
+				console.log('submit');
+
+				let pwTag = document.querySelector('input[name="pw"]');
+				console.log(pwTag);
+
+				//패스워드 미입력
+				let pw = pwTag.value.trim();
+				if(pw==''){
+					//전송멈춰!!
+					event.preventDefault();
+					// alert('비밀번호를 입력하세요');
+					window.alert('비밀번호를 입력하세요');
+
+					return false;
+				}
+
+				let nameTag = document.querySelector('input[name="name"]');
+				console.log(nameTag);
+				console.log(nameTag.value);
+				console.log(nameTag.value.trim());
+
+				let name = nameTag.value.trim();
+
+				if(name==''){
+					event.preventDefault();
+					window.alert('이름을 입력하세요');
+
+					return false;
+
+				}
+
+			});
+
+		});
+		
+	</script>
+
+</body>
+
+</html>
