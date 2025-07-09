@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -18,8 +18,24 @@
 		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 	</ul>
 
+	<script>
+		$(document).ready(function(){
+			console.log('돔');
+			let liTags = $('.red');
+			liTags.css('color','#ff0000');
+
+			console.log(liTags);
+
+			$('.blue').css('color','#0000ff');
+			
+			// let dTags = $('.red','.blue');
+			// console.log(dTags);
+			// dTags.css('color','#ff00ff');
+
+
+		});
+	</script>
+
 </body>
-
-
 
 </html>

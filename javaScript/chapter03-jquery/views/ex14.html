@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 
@@ -33,17 +34,87 @@
 	<button id="btn" type="button">li요소추가</button>
 	<br>
 	<br>
-	<button id="datBtn" type="button">전체데이터수집</button>
+	<button id="dataBtn" type="button">전체데이터수집</button>
 	
+	<script>
+		$(document).ready(function(event){
+			console.log('돔');
+
+			$('#btn').on('click',function(){
+
+				let str = '';
+				str += '<li data-bno="5" data-pname="이효리">다섯번째 아이템입니다.</li>';
+				str += '<li data-bno="6" data-pname="서장훈">여섯번째 아이템입니다.</li>';
+				str += '<li data-bno="7" data-pname="김종국">일곱번째 아이템입니다.</li>';
+				$('ul').append(str);
+
+			});
+			/*
+			$('li').on('click', function(){
+				console.log('li클릭');
+
+				let liTags = $(this);
+				console.log(liTags.text());
+
+			});
+			*/
+
+			$('ul').on('click', 'li', function(){
+				console.log('클릭');
+				
+				console.log($(this));
+				console.log($(this).text());
+
+			});
+
+			//전체 데이터 수집 클릭
+			$('#dataBtn').on('click', function(){
+
+				//클릭했을 때 리스트 먼저 만들기
+				let personList = [];
+
+				//데이터 수집하기
+				let liTags = $('li');
+				console.log(liTags);
+				
+				/*
+				for(let i=0; i<liTags.length; i++){
+					let name = $(liTags[i]).data('pname');
+					let no = $(liTags[i]).data('bno');
+					console.log(name);
+					console.log(no);
+				}
+				*/
+
+				//jquery에 반복문 사용
+				liTags.each(function(index, item){
+					// console.log(index);
+					// console.log(item);
+					
+					//item는 자바, jquery용으로 받아오려면 $()형태로 받아와야 한다
+
+					// console.log($(item).data('bno'));
+					// console.log($(item).data('pname'));
+
+					//데이터 묶기
+					let personVO = {
+						bno: $(item).data('bno'),
+						pname: $(item).data('pname')						
+					};
+					
+					personList.push(personVO);
+
+				});
+				
+				console.log(personList);
+			});
+
+
+		});
+
+	</script>
 	
 	
 </body>
-
-
-
-
-
-
-
 
 </html>

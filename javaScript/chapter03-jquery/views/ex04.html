@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -27,6 +28,28 @@
 	<input type="text" name="id">
 	<input type="text" name="name">
 	<input type="text" name="password">
+	
+	<script>
+		$(document).ready(function(){
+			console.log('돔트리');
+
+			let liTags = $('[class]');
+			console.log(liTags);
+			liTags.css('color','#0000ff');
+
+			let fiTags = $('li[class="first"]');
+			console.log(fiTags);
+
+			fiTags.css('color','#ff0000');
+
+			console.log('[name="password"]');
+			console.log($('input[name="id"]'));
+
+			console.log($('input[name]'));
+
+		});
+
+	</script>
 	
 </body>
 

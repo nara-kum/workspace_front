@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -12,10 +12,69 @@
 	<ul>
 		<li id="first" class="red" data-bno="1" data-pno="5">첫번째 아이템입니다.</li>
 		<li id="second" class="blue" data-bno="2" data-pno="4"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del" data-bno="3" data-pno="5">세번째아이템입니다.</li>
+		<li id="third" class="del" data-bno="3" data-pno="5">세번째 아이템입니다.</li>
 		<li data-bno="4" data-pno="3"><strong>네번째 아이템입니다.</strong></li>
 	</ul>
 	<button>버튼</button>
+
+	<script>
+		$(document).ready(function(){
+			console.log('돔');
+			
+			/*
+			let fiTag2 = document.querySelector('#first');
+			console.log(fiTag2);
+			console.log(fiTag2.className);
+			*/
+
+			//방법1
+			let fiTag = $('#first');
+			console.log(fiTag.attr('class'));
+			console.log(fiTag.attr('id'));
+
+			//첫번째 li에 이벤트 등록
+			fiTag.on('click', function(){
+				console.log('클릭');
+			});
+
+			/*
+			let liTags = $('li');
+			console.log(liTags);
+
+			liTags.on('click', function(){
+				console.log('li 클릭');		//이벤트 등록 확인용
+
+				let thisTag = $(this);		//li요소중에 이번에 클릭된 특정 li를 정확하게 알려준다
+				console.log(thisTag);
+
+				//$this의 내용을 변경해준다
+				thisTag.html('변경된 문구');
+
+			});
+			*/
+
+			//li태그 클릭했을 때
+			$('li').on('click', function(){
+			console.log('li 클릭');		//이벤트 등록 확인용
+
+			let thisTag = $(this);		//li요소중에 이번에 클릭된 특정 li를 정확하게 알려준다
+			console.log(thisTag);
+
+			//$this의 내용을 변경해준다
+			thisTag.html('변경된 문구');
+
+			//id 출력
+			console.log($(this).attr('id'));
+
+			//class 출력
+			console.log($(this).attr('class'));
+			
+			console.log($(this).data('bno'));
+
+			});
+		});
+
+	</script>
 </body>
 
 

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -16,6 +17,20 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		<li>다섯번째 아이템입니다.</li>
 	</ul>
+
+	<script>
+		$(document).ready(function(){
+			console.log('둄');
+
+			let delTags = $('.del');
+			console.log(delTags);
+
+			// delTags.text('');
+			delTags.empty();
+			
+		});
+
+	</script>
 
 </body>
 

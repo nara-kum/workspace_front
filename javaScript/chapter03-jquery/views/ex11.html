@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <style>
 	.red {color: red;}
@@ -27,6 +27,41 @@
 	이름2:<input type="text" name="name2" value="홍길동"><br>
 	비밀번호2:<input type="password" name="password2" value="1234"><br>
 	<textarea name="content2">산토끼토끼야</textarea>
+
+	<script>
+		$(document).ready(function(){
+			console.log('제발돔...');
+
+			//잡아온 태그들 모음
+			let nameTag = $('[name="name"]');
+			let pwTag = $('[name="password"]');
+			let cttTag = $('[name="content"]');
+
+			//이름
+			nameTag.val('김나라');
+			//패스워드
+			pwTag.val(1234);
+			//내용
+			cttTag.val('학교종이땡땡땡');
+
+			//태그 잡아오기
+			let name2Tag = $('[name="name2"]');
+			let pw2Tag = $('[name="password2"]');
+			let ctt2Tag = $('[name="content2"]');
+
+			//이름
+			name2Tag.val();
+			console.log(name2Tag.val());
+			//패스워드
+			pw2Tag.val();
+			console.log(pw2Tag.val());
+			//내용
+			ctt2Tag.val();
+			console.log(ctt2Tag.val());
+			
+		});
+
+	</script>
 	
 </body>
 

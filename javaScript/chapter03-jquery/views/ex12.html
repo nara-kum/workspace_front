@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -12,8 +12,33 @@
 		<button id="btn" type="button">테스트버튼</button>
 	</div>
 
+	<script>
+		/*
+		$(document).ready(function(){
+			console.log('뚐!!');
+
+			let btnTag = document.querySelector('#btn');
+			console.log(btnTag);
+
+			btnTag.addEventListener('click',function(){
+				console.log('클릭감지');
+
+			});
+		
+		});
+		*/
+
+		let btnTag = $('#btn');
+		console.log(btnTag);
+
+		//.on()사용하렴
+		btnTag.on('click',function(){
+			let hTag = $('#display');
+			hTag.text('김나라').css('color', '#0000ff');
+		});
+
+	</script>
+
 </body>
-
-
 
 </html>
